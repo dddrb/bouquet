@@ -1,12 +1,12 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "bouquet_core/version"
+require "bouquet/core/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "bouquet_core"
-  s.version     = BouquetCore::VERSION
+  s.version     = Bouquet::Core::VERSION
   s.authors     = ["ogom"]
   s.email       = ["ogom@outlook.com"]
   s.homepage    = "TODO"

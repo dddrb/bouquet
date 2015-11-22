@@ -1,4 +1,6 @@
-require "bouquet_core/engine"
+require "bouquet/core/engine"
 
-module BouquetCore
+module Bouquet
+  module Core
+  end
 end

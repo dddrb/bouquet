@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
 
-  mount BouquetCore::Engine => "/bouquet_core"
+  mount Bouquet::Core::Engine => "/bouquet_core"
 end

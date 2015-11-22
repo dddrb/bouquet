@@ -1,3 +1,5 @@
-module BouquetCore
-  VERSION = "0.0.1"
+module Bouquet
+  module Core
+    VERSION = "0.0.1"
+  end
 end
