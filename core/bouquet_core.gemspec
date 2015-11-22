@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Bouquet::Core::VERSION
   s.authors     = ["ogom"]
   s.email       = ["ogom@outlook.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of BouquetCore."
-  s.description = "TODO: Description of BouquetCore."
+  s.homepage    = "https://github.com/dddrb/bouquet"
+  s.summary     = "Summary of BouquetCore."
+  s.description = "Description of BouquetCore."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

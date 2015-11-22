@@ -1,3 +1,4 @@
+require "rails/all"
 require "bouquet/core/engine"
 
 module Bouquet
