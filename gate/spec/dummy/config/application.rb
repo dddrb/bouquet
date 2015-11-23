@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require(*Rails.groups)
-require "bouquet_gate"
+require "bouquet/gate"
 
 module Dummy
   class Application < Rails::Application
