@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  mount Bouquet::Store::Engine => "/bouquet-store"
+  mount Bouquet::Store::Engine => "/store"
 end

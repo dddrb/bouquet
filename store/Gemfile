@@ -12,3 +12,7 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
+gem 'rspec-rails', group: [:development, :test]
+gem 'factory_girl_rails', group: [:development, :test]
+gem 'bouquet-core', path: '../core'
+gem 'bouquet-gate', path: '../gate'

@@ -2,6 +2,7 @@ module Bouquet
   module Gate
     class Engine < ::Rails::Engine
       isolate_namespace Bouquet
+      engine_name 'bouquet-gate'
       config.generators do |g|
         g.api_only = true
         g.test_framework :rspec, fixture: true
