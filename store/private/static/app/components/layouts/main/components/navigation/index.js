@@ -6,6 +6,7 @@ import style from './style.scss';
 class Navigation extends Component {
   items = [
     {caption: 'Account', icon: 'person', to: '/components/sample'},
+    {caption: 'Catalog', icon: 'card_giftcard', to: '/components/catalog'},
     {caption: 'Counter', icon: 'plus_one', to: '/components/counter'},
     {caption: 'About', icon: 'domain', to: '/components/about'}
   ];
@@ -26,8 +27,6 @@ class Navigation extends Component {
   });
 
   render () {
-    console.log(this.props.history);
-
     let className = style.root;
     if (this.props.className) className += ` ${this.props.className}`;
 

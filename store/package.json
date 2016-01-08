@@ -22,6 +22,7 @@
     "redux": "^3.0.4",
     "redux-simple-router": "^1.0.2",
     "redux-thunk": "^1.0.0",
+    "superagent": "^1.6.1",
     "whatwg-fetch": "^0.10.1"
   },
   "devDependencies": {
