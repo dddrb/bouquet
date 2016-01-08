@@ -2,13 +2,14 @@
 <html>
 <head>
   <title>Bouquet store</title>
-  <%= stylesheet_link_tag    "bouquet/store/application", media: "all" %>
-  <%= javascript_include_tag "bouquet/store/application" %>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <%= switch_stylesheet_link_tag "bouquet/store/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
 <%= yield %>
-
+  <%= switch_javascript_include_tag "bouquet/store/application" %>
 </body>
 </html>

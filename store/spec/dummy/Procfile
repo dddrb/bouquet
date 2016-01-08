@@ -1,0 +1,2 @@
+web: NODE_ENV=development rails server
+pack: NODE_ENV=development npm start

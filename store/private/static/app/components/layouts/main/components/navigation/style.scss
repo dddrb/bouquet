@@ -1,0 +1,34 @@
+@import "../../config";
+
+.root {
+  display: flex;
+  width: $navigation-width;
+  flex-direction: column;
+  background-color: $color-background;
+}
+
+.list {
+  @include no-webkit-scrollbar;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.item {
+  padding: $navigation-v-padding $navigation-h-padding;
+}
+
+.active {
+  background: $color-divider;
+}
+
+.footer {
+  flex-grow: 0;
+  padding: $navigation-h-padding;
+  overflow: hidden;
+  font-size: $font-size-small;
+  color: $color-text-secondary;
+  border-top: $navigation-footer-border;
+  > * {
+    display: block;
+  }
+}

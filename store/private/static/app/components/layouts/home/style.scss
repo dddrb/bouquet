@@ -1,0 +1,44 @@
+@import "../../globals";
+@import "./config";
+
+.header {
+  color: $color-primary-contrast;
+  text-align: center;
+  background: linear-gradient(45deg, $color-primary-dark 0%, $color-primary-light 100%);
+  .title {
+    @include typo-display-3;
+    padding: 4 * $unit;
+  }
+  .subtitle {
+    @include typo-headline;
+    padding-top: 1 * $unit;
+    padding-bottom: 10 * $unit;
+    font-weight: 400;
+    line-height: 1.2;
+    opacity: $home-text-subtitle-opacity;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: $color-content;
+  height: 450px;
+  .summary {
+    padding-top: 6 * $unit;
+    padding-bottom: 10 * $unit;
+  }
+}
+
+.footer {
+  padding: 2 * $unit;
+  color: $color-content;
+  text-align: center;
+  background-color: $color-text;
+  .author {
+    font-size: $font-size-normal;
+    color: $color-accent;
+  }
+}

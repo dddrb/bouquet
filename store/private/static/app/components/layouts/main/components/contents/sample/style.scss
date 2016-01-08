@@ -1,0 +1,9 @@
+@import "../../../config";
+
+.content {
+  padding: $content-offset;
+  .text {
+    font-size: 2 * $unit;
+    color: #FF0000;
+  }
+}

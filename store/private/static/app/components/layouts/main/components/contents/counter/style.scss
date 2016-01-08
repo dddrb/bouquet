@@ -1,0 +1,22 @@
+@import "../../../config";
+
+.content {
+  padding: $content-offset;
+  .counter {
+    position: absolute;
+    top: 6 * $unit;
+    left: 17 * $unit;
+    font-size: 6 * $unit;
+    font-weight: bold;
+    letter-spacing: -.025em;
+  }
+  .btnGroup {
+    position: relative;
+    top: 12 * $unit;
+    left: 2 * $unit;
+  }
+  .btn {
+    font-size: 1 * $unit;
+    margin: 10px;
+  }
+}

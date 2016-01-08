@@ -1,7 +1,7 @@
 require_dependency "bouquet/store/application_controller"
 
-module Bouquet
-  class Store::MainController < ApplicationController
+module Bouquet::Store
+  class MainController < ApplicationController
     def index
     end
   end
