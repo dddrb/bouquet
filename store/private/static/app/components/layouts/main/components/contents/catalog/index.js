@@ -5,8 +5,14 @@ import style from './style';
 
 class Catalog extends Component {
   componentDidMount() {
-    this.props.searchComments();
-  }
+    this.props.searchProducts();
+  };
+
+  handleClick(id) {
+    const {createOrders} = this.props;
+    createOrders(id);
+    return
+  };
 
   render() {
     const productNodes = this.props.products.map((product, index) => {
@@ -15,6 +21,7 @@ class Catalog extends Component {
           <CardTitle title={product.name} />
           <CardText>Text</CardText>
           <CardActions>
+            <Button label="Order" onClick={e => this.handleClick(product.id)} />
           </CardActions>
         </Card>
       );

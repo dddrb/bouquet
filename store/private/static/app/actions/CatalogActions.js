@@ -8,7 +8,7 @@ export function receiveProducts(products) {
   }
 }
 
-export function searchComments() {
+export function searchProducts() {
   return dispatch => {
     request
       .get('http://localhost:3000/api/products')
@@ -16,8 +16,14 @@ export function searchComments() {
         if (err) {
           return new Error(err);
         }
-        console.log(res.body)
         dispatch(receiveProducts(res.body))
       })
+  }
+}
+
+export function createOrders(product_id) {
+  console.log("createOrders " + product_id);
+  return {
+    type: types.CREATE_ORDER
   }
 }

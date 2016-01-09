@@ -1,7 +1,7 @@
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import Catalog from '../components/layouts/main/components/contents/catalog';
-import * as ProductActions from '../actions/ProductActions';
+import * as CatalogActions from '../actions/CatalogActions';
 
 function mapStateToProps(state) {
   return {
@@ -11,7 +11,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(ProductActions, dispatch);
+  return bindActionCreators(CatalogActions, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Catalog);

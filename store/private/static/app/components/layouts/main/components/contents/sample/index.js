@@ -17,12 +17,10 @@ class Sample extends Component {
   };
 
   render() {
-    console.log(this.props.history);
-
     const {title, changeTitle} = this.props;
     return (
       <div className={style.content}>
-        <h1 className={style.text}>Welcome {title}!</h1>
+        <h1 className={style.text}>Welcome {title}</h1>
         <section>
           <Input type='text' label='Name' name='name' value={this.state.name} onChange={this.handleChange.bind(this, 'name')} />
         </section>
