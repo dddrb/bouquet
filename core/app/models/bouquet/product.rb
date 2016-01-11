@@ -1,4 +1,3 @@
-# Bouquet::Product.create(name: :p1)
 # Bouquet::Product.find_by(name: :p1).materials
 module Bouquet
   class Product < ApplicationRecord

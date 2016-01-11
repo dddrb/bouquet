@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160108160523) do
+ActiveRecord::Schema.define(version: 20160110181852) do
 
   create_table "bouquet_arrivals", force: :cascade do |t|
     t.string   "state"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160108160523) do
 
   create_table "bouquet_assemblies", force: :cascade do |t|
     t.string   "name"
+    t.integer  "quantity"
     t.integer  "product_id"
     t.integer  "material_id"
     t.datetime "created_at",  null: false
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160108160523) do
 
   create_table "bouquet_locations", force: :cascade do |t|
     t.string   "name"
+    t.integer  "capacity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -69,6 +71,7 @@ ActiveRecord::Schema.define(version: 20160108160523) do
 
   create_table "bouquet_products", force: :cascade do |t|
     t.string   "name"
+    t.integer  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -123,16 +126,16 @@ ActiveRecord::Schema.define(version: 20160108160523) do
     t.string   "state"
     t.date     "date"
     t.integer  "quantity"
-    t.integer  "stock_id"
-    t.integer  "delivery_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.index ["delivery_id"], name: "index_bouquet_storages_on_delivery_id"
-    t.index ["stock_id"], name: "index_bouquet_storages_on_stock_id"
+    t.string   "storable_type"
+    t.integer  "storable_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["storable_type", "storable_id"], name: "index_bouquet_storages_on_storable_type_and_storable_id"
   end
 
   create_table "bouquet_suppliers", force: :cascade do |t|
     t.string   "name"
+    t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
