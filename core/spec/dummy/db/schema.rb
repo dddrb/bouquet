@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160110181852) do
+ActiveRecord::Schema.define(version: 20160111072201) do
 
   create_table "bouquet_arrivals", force: :cascade do |t|
     t.string   "state"
@@ -80,22 +80,36 @@ ActiveRecord::Schema.define(version: 20160110181852) do
     t.string   "state"
     t.date     "date"
     t.integer  "quantity"
+    t.date     "arrival_date"
     t.integer  "material_id"
     t.integer  "supplier_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.index ["material_id"], name: "index_bouquet_purchase_orders_on_material_id"
     t.index ["supplier_id"], name: "index_bouquet_purchase_orders_on_supplier_id"
+  end
+
+  create_table "bouquet_retrievals", force: :cascade do |t|
+    t.string   "state"
+    t.date     "date"
+    t.integer  "quantity"
+    t.integer  "storage_id"
+    t.integer  "delivery_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["delivery_id"], name: "index_bouquet_retrievals_on_delivery_id"
+    t.index ["storage_id"], name: "index_bouquet_retrievals_on_storage_id"
   end
 
   create_table "bouquet_sales_orders", force: :cascade do |t|
     t.string   "state"
     t.date     "date"
     t.integer  "quantity"
+    t.date     "shipment_date"
     t.integer  "product_id"
     t.integer  "customer_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.index ["customer_id"], name: "index_bouquet_sales_orders_on_customer_id"
     t.index ["product_id"], name: "index_bouquet_sales_orders_on_product_id"
   end
@@ -126,11 +140,10 @@ ActiveRecord::Schema.define(version: 20160110181852) do
     t.string   "state"
     t.date     "date"
     t.integer  "quantity"
-    t.string   "storable_type"
-    t.integer  "storable_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.index ["storable_type", "storable_id"], name: "index_bouquet_storages_on_storable_type_and_storable_id"
+    t.integer  "stock_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["stock_id"], name: "index_bouquet_storages_on_stock_id"
   end
 
   create_table "bouquet_suppliers", force: :cascade do |t|

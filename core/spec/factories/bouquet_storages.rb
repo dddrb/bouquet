@@ -3,7 +3,7 @@ FactoryGirl.define do
     state "MyString"
 date "2016-01-11"
 quantity 1
-storable nil
+stock nil
   end
 
 end

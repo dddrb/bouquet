@@ -1,5 +1,5 @@
 module Bouquet
   class Storage < ApplicationRecord
-    belongs_to :storable, polymorphic: true
+    belongs_to :stock
   end
 end

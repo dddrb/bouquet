@@ -4,7 +4,7 @@ class CreateBouquetStorages < ActiveRecord::Migration[5.0]
       t.string :state
       t.date :date
       t.integer :quantity
-      t.references :storable, polymorphic: true, index: true
+      t.references :stock, index: true, foreign_key: true
 
       t.timestamps
     end
