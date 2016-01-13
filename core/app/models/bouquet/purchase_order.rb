@@ -1,3 +1,6 @@
+# purchase_order = Bouquet::PurchaseOrder.new(quantity: 1, material_id: 1, supplier_id: 1)
+# purchase_order.save
+# purchase_order.arrival.stocks.first.storages.first
 module Bouquet
   class PurchaseOrder < ApplicationRecord
     belongs_to :material
