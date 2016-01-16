@@ -20,7 +20,7 @@ POST api/sales_orders
 
 {
   "quantity": 10,
-  "arrival_date": "2014-03-21",
+  "shipment_date": "2014-03-21",
   "product_id": 1,
   "customer_id": 1
 }
