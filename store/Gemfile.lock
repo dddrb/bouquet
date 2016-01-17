@@ -125,6 +125,7 @@ GEM
       mini_portile2 (~> 2.0.0.rc2)
     rack (2.0.0.alpha)
       json
+    rack-cors (0.4.0)
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (5.0.0.beta1)
@@ -198,6 +199,7 @@ DEPENDENCIES
   bouquet-store!
   factory_girl_rails
   foreman
+  rack-cors
   rspec-rails
   sqlite3
 

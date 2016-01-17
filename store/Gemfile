@@ -17,3 +17,4 @@ gem 'factory_girl_rails', group: [:development, :test]
 gem 'bouquet-core', path: '../core'
 gem 'bouquet-gate', path: '../gate'
 gem 'foreman', require: false
+gem 'rack-cors', require: 'rack/cors'

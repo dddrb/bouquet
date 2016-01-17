@@ -21,7 +21,7 @@ module Bouquet
       @sales_order = Bouquet::SalesOrder.new(sales_order_params)
 
       if @sales_order.save
-        render json: @sales_order, status: :created, location: @sales_order
+        render json: @sales_order, status: :created #, location: @sales_order
       else
         render json: @sales_order.errors, status: :unprocessable_entity
       end

@@ -21,7 +21,7 @@ module Bouquet
       @purchase_order = Bouquet::PurchaseOrder.new(purchase_order_params)
 
       if @purchase_order.save
-        render json: @purchase_order, status: :created, location: @purchase_order
+        render json: @purchase_order, status: :created #, location: @purchase_order
       else
         render json: @purchase_order.errors, status: :unprocessable_entity
       end
