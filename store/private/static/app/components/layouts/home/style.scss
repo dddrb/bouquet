@@ -1,44 +1,23 @@
-@import "../../globals";
-@import "./config";
-
-.header {
-  color: $color-primary-contrast;
-  text-align: center;
-  background: linear-gradient(45deg, $color-primary-dark 0%, $color-primary-light 100%);
-  .title {
-    @include typo-display-3;
-    padding: 4 * $unit;
-  }
-  .subtitle {
-    @include typo-headline;
-    padding-top: 1 * $unit;
-    padding-bottom: 10 * $unit;
-    font-weight: 400;
-    line-height: 1.2;
-    opacity: $home-text-subtitle-opacity;
-  }
-}
+@import "../config";
+@import "~react-toolbox/lib/app_bar/config";
+@import "~react-toolbox/lib/button/config";
 
 .content {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  background-color: $color-content;
-  height: 450px;
-  .summary {
-    padding-top: 6 * $unit;
-    padding-bottom: 10 * $unit;
-  }
+  position: fixed;
+  top: $appbar-height;
+  right: 0;
+  bottom: 0;
+  left: $sidebar-width;
+  z-index: $z-index-normal;
+  transition: padding $animation-duration $animation-curve-default;
 }
 
-.footer {
-  padding: 2 * $unit;
-  color: $color-content;
-  text-align: center;
-  background-color: $color-text;
-  .author {
-    font-size: $font-size-normal;
-    color: $color-accent;
-  }
+.sidebar {
+  position: fixed;
+  top: $appbar-height;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-high;
+  box-shadow: $content-left-shadow;
+  transition: transform $animation-duration $animation-curve-default;
 }

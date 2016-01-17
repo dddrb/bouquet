@@ -1,14 +1,16 @@
-import {combineReducers} from 'redux';
-import {routeReducer} from 'redux-simple-router';
-import counter from './counter';
-import sample from './sample';
-import product from './product';
+import {combineReducers} from 'redux'
+import {routeReducer as routing} from 'redux-simple-router'
+import account from './account'
+import product from './product'
+import material from './material'
+import counter from './counter'
 
 const rootReducer = combineReducers({
-  routing: routeReducer,
-  counter,
-  sample,
-  product
-});
+  routing,
+  account,
+  product,
+  material,
+  counter
+})
 
-export default rootReducer;
+export default rootReducer

@@ -1,12 +1,30 @@
-import * as types from '../constants/ActionTypes';
+import * as types from '../constants/ActionTypes'
 
-const initialState = {products: []};
+const initialState = {
+  products: [],
+  order: {},
+  snackbar_active: false
+}
 
 export default function(state = initialState, action) {
   switch (action.type) {
-  case types.RECEIVE_PRODUCTS:
-    return {...state, products: action.products};
+  case types.PRODUCT_RECEIVE:
+    return {
+      ...state,
+      products: action.products
+    }
+  case types.PRODUCT_SHOW_ORDER:
+    return {
+      ...state,
+      order: action.order,
+      snackbar_active: true
+    }
+  case types.PRODUCT_HIDE_SNACKBAR:
+    return {
+      ...state,
+      snackbar_active: false
+    }
   default:
-    return state;
+    return state
   }
 }

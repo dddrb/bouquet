@@ -1,4 +1,3 @@
-# require './db/seeds'
 
 # 製品加工
 product = Bouquet::Product.create_with(price: 1).find_or_create_by(name: :p1)

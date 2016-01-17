@@ -1,0 +1,25 @@
+@import '../contents';
+
+.content {
+  .materials {
+    margin:20px;
+    width:660px;
+  }
+  .material {
+    float:left;
+    margin-right:20px;
+    margin-bottom:20px;
+    width:200px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .content {
+    .materials {
+      width:200px;
+    }
+    .material {
+      width:400px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import './config';
+
+.content {
+  padding: 4 * $unit;
+
+  h1 {
+    font-size: $h1-size;
+    color: $color-text;
+    padding-bottom: 1 * $unit;
+  }
+}
