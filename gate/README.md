@@ -1,8 +1,8 @@
 # Bouquet::Gate
 
-This project rocks and uses MIT-LICENSE.
+## API
 
-
+### Purchase Order
 
 ```
 POST api/purchase_orders
@@ -15,11 +15,13 @@ POST api/purchase_orders
 }
 ```
 
+### Sales Order
+
 ```
 POST api/sales_orders
 
 {
-  "quantity": 10,
+  "quantity": 1,
   "shipment_date": "2014-03-21",
   "product_id": 1,
   "customer_id": 1

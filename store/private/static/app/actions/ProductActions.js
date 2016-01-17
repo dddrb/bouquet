@@ -1,6 +1,8 @@
 import * as types from '../constants/ActionTypes'
 import 'isomorphic-fetch'
 
+const endpoint = 'http://localhost:3000'
+
 export function receiveProducts(products) {
   return {
     type: types.PRODUCT_RECEIVE,
@@ -10,7 +12,7 @@ export function receiveProducts(products) {
 
 export function searchProducts() {
   return dispatch => {
-    return fetch('/api/products')
+    return fetch(endpoint + '/api/products')
       .then(response => response.json())
       .then(json => dispatch(receiveProducts(json)))
   }
@@ -26,7 +28,7 @@ export function showOrder(order) {
 
 export function salesOrder(product_id) {
   return dispatch => {
-    return fetch('/api/sales_orders', {
+    return fetch(endpoint + '/api/sales_orders', {
         method: 'post',
         headers: {
           'Accept': 'application/json',

@@ -22,7 +22,7 @@ class Layout extends Component {
       return (
         <Card key={index} className={style.material}>
           <CardTitle title={material.name} />
-          <CardText>Sales</CardText>
+          <CardText>Purchase</CardText>
           <CardActions>
             <Button label="Order"
               onClick={::this.handleOrderClick.bind(this, material.id)} />
