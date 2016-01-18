@@ -6,7 +6,21 @@ module Bouquet
 
     # GET /products
     def index
-      @products = Bouquet::Product.all
+      products = Bouquet::Product.all
+
+      @products = products.map do |product|
+        {
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          assemblies: product.assemblies.map do |assembly|
+            {
+              material_name: assembly.material.name,
+              quantity: assembly.quantity
+            }
+          end
+        }
+      end
 
       render json: @products
     end

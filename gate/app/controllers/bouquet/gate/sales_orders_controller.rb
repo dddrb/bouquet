@@ -19,6 +19,7 @@ module Bouquet
     # POST /sales_orders
     def create
       @sales_order = Bouquet::SalesOrder.new(sales_order_params)
+      @sales_order.shipment_date = Time.current
 
       if @sales_order.save
         render json: @sales_order, status: :created #, location: @sales_order

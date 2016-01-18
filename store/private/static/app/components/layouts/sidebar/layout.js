@@ -7,11 +7,12 @@ import style from './style'
 
 class Layout extends Component {
   items = [
-    {caption: 'Account',  icon: 'person',        to: 'account'},
-    {caption: 'Product',  icon: 'card_giftcard', to: 'products'},
-    {caption: 'Material', icon: 'local_florist', to: 'materials'},
-    {caption: 'Counter',  icon: 'plus_one',      to: 'counter'},
-    {caption: 'About',    icon: 'domain',        to: 'about'}
+    {caption: 'Account',   icon: 'person',        to: 'account'},
+    {caption: 'Product',   icon: 'card_giftcard', to: 'products'},
+    {caption: 'Material',  icon: 'local_florist', to: 'materials'},
+    {caption: 'Inventory', icon: 'widgets',       to: 'inventory'},
+    {caption: 'Counter',   icon: 'plus_one',      to: 'counter'},
+    {caption: 'About',     icon: 'domain',        to: 'about'}
   ]
 
   itemNodes () {

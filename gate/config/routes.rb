@@ -4,5 +4,6 @@ Bouquet::Gate::Engine.routes.draw do
     resources :materials
     resources :purchase_orders
     resources :sales_orders
+    resources :storages, only: :index
   end
 end

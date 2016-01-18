@@ -19,10 +19,19 @@ class Layout extends Component {
 
   productNodes () {
     const nodes = this.props.products.map((product, index) => {
+      const materials = product.assemblies.map((assembly, index) => {
+        return (
+          <li key={index}>{assembly.material_name} : {assembly.quantity}</li>
+        )
+      })
+
       return (
         <Card key={index} className={style.product}>
           <CardTitle title={product.name} />
-          <CardText>Sales</CardText>
+          <CardText>
+            Materials
+            <ul className={style.material}>{materials}</ul>
+          </CardText>
           <CardActions>
             <Button label="Order"
               onClick={::this.handleOrderClick.bind(this, product.id)} />
@@ -38,6 +47,7 @@ class Layout extends Component {
     return (
       <div className={style.content}>
         <h1>Product</h1>
+        Customers to order products.
 
         <ul className={style.products}>
           {this.productNodes()}

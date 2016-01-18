@@ -14,7 +14,7 @@ class Header extends Component {
         </Link>
 
         <h1 className={style.title}>
-          React Toolbox Example
+          Freres Memoire Example
         </h1>
 
         <Button className={style.button} floating accent

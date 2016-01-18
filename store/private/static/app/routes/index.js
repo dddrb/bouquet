@@ -10,6 +10,7 @@ export default (
       <Route path="/account" component={Contents.Account} />
       <Route path="/products" component={Contents.Product} />
       <Route path="/materials" component={Contents.Material} />
+      <Route path="/inventory" component={Contents.Inventory} />
       <Route path="/counter" component={Contents.Counter} />
       <Route path="/about" component={Contents.About} />
     </Route>

@@ -3,6 +3,7 @@ import {routeReducer as routing} from 'redux-simple-router'
 import account from './account'
 import product from './product'
 import material from './material'
+import inventory from './inventory'
 import counter from './counter'
 
 const rootReducer = combineReducers({
@@ -10,6 +11,7 @@ const rootReducer = combineReducers({
   account,
   product,
   material,
+  inventory,
   counter
 })
 

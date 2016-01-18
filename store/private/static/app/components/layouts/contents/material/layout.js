@@ -38,6 +38,7 @@ class Layout extends Component {
     return (
       <div className={style.content}>
         <h1>Material</h1>
+        Supplier is Virtual Flower Shop.
 
         <ul className={style.materials}>
           {this.materialNodes()}

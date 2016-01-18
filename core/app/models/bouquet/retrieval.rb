@@ -1,3 +1,4 @@
+# Bouquet::Retrieval
 module Bouquet
   class Retrieval < ApplicationRecord
     belongs_to :storage

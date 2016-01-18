@@ -19,6 +19,7 @@ module Bouquet
     # POST /purchase_orders
     def create
       @purchase_order = Bouquet::PurchaseOrder.new(purchase_order_params)
+      @purchase_order.arrival_date = Time.current
 
       if @purchase_order.save
         render json: @purchase_order, status: :created #, location: @purchase_order

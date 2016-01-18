@@ -10,13 +10,13 @@ module Bouquet
     after_create do
       location = Bouquet::Location.first
 
-      arrival = build_arrival(quantity: quantity)
+      arrival = build_arrival(quantity: quantity, date: Time.current)
       arrival.save
 
-      stock = arrival.stocks.new(quantity: quantity, location_id: location.id)
+      stock = arrival.stocks.new(quantity: quantity, date: Time.current, location_id: location.id)
       stock.save
 
-      storage = stock.storages.new(quantity: quantity)
+      storage = stock.storages.new(initial_quantity: quantity, date: Time.current)
       storage.save
     end
   end
