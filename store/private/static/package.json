@@ -2,14 +2,15 @@
   "name": "static",
   "version": "0.1.0",
   "scripts": {
-    "start": "cd ./private/static && DEBUG=true node server.js",
-    "build": "cd ./private/static && webpack -p --config webpack.production.js",
-    "elect": "cd ./private/static && electron main.js"
+    "start": "NODE_ENV=development node server.js",
+    "build": "NODE_ENV=production webpack -p --config webpack.production.js",
+    "elect": "electron main.js"
   },
   "dependencies": {
     "babel-core": "^5.0.0",
     "es6-promise": "^3.0.2",
     "history": "^1.17.0",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.0.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",

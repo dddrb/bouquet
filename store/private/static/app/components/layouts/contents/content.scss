@@ -1,6 +1,8 @@
 @import './config';
 
 .content {
+  overflow:auto;
+  height: 100%;
   padding: 4 * $unit;
 
   h1 {

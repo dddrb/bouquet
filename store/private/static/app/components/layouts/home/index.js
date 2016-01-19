@@ -9,7 +9,7 @@ class Home extends Component {
       <div>
         <Header />
         <Sidebar className={style.sidebar} />
-        <div className={style.content}>
+        <div className={style.contents}>
           {this.props.children}
         </div>
       </div>

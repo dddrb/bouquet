@@ -1,8 +1,8 @@
 import * as types from '../constants/ActionTypes'
 import 'isomorphic-fetch'
 
-//const endpoint = 'http://localhost:3000'
-const endpoint = ''
+const endpoint = 'http://localhost:3000'
+//const endpoint = ''
 
 export function receiveMaterials(materials) {
   return {
