@@ -23,6 +23,7 @@ module Bouquet
 
       if @sales_order.save
         render json: @sales_order, status: :created #, location: @sales_order
+        Bouquet::Gate::ShipmentJob.perform_later(@sales_order)
       else
         render json: @sales_order.errors, status: :unprocessable_entity
       end
