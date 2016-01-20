@@ -7,7 +7,9 @@ Implement florist in Ruby on Rails.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bouquet'
+gem 'bouquet-core', github: 'dddrb/bouquet'
+gem 'bouquet-gate', github: 'dddrb/bouquet'
+gem 'bouquet-store', github: 'dddrb/bouquet'
 ```
 
 ## Usage
